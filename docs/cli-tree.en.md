@@ -1,15 +1,16 @@
-# CLI Capability Map
+# CLI Tree
 
-This page is the compact capability map for the `ChatMail` CLI. Use it to review which commands are first-class entries and which are still boundary or planned slots. After scaffolding, update it with the real command tree; do not present unimplemented commands as available operations.
+`ChatMail` is currently a root-only CLI. This page must stay synchronized from the real `chatmail --tree` output and must not invent future commands.
 
 Importable Python functions are mapped in [Interface Tree](interface-tree.md). Current package boundaries are tracked in [Capability Map](capability-map.md).
 
 ## Top-Level Commands
 
 ```text
-chatmail                  # ChatMail command-line entry
-├── --help                     # Show CLI help and registered commands
-└── --version                  # Print the current package version
+chatmail  # ChatArch mail tooling entrypoint
+├── --help  # show command help
+├── --version  # show the installed package version
+└── --tree  # show this CLI tree
 ```
 
 ## Base Entries
@@ -17,27 +18,19 @@ chatmail                  # ChatMail command-line entry
 ```text
 chatmail --help           # Verify the command is installed and inspect the current command tree
 chatmail --version        # Verify the installed version
+chatmail --tree           # Show the real CLI tree
 ```
 
-`--help` and `--version` are the scaffolded verification entries. After adding business commands, follow the ChatTea CLI tree pattern: split command groups into their own sections and annotate every command line.
+`--help`, `--version`, and `--tree` are the current verification entries. After adding business commands, follow the ChatTea CLI tree pattern: split command groups into their own sections and annotate every command line.
 
-## Business Command Slots
+## Current Status
 
-```text
-chatmail <group>          # Command group named after real package capability
-├── <command>                  # Explain what this command does
-└── <command>                  # Explain status, boundary, or checkpoint behavior
-```
-
-This is a structural placeholder, not a promise of future capability. Only document a command as implemented after the command, Python function, and tests exist.
-
-## Status Contract
-
-| Status | Meaning |
-| --- | --- |
-| Implemented | Command, function, and tests exist |
-| Verified | Covered by CI, local smoke, or real-service practice |
-| Planned / checkpoint | Keep only boundary notes; do not write operation tutorials before implementation |
+| Entry | Status | Notes |
+| --- | --- | --- |
+| `chatmail --help` | Implemented | Shows root command help. |
+| `chatmail --version` | Implemented | Shows the installed package version. |
+| `chatmail --tree` | Implemented | Shows the current real CLI tree. |
+| Mail tooling subcommands | Not implemented | Add them only after real mail tooling capability exists. |
 
 ## Implementation Contract
 
