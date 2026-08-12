@@ -36,18 +36,23 @@ ChatArch mail tooling package.
 pip install -e ".[dev]"
 chatmail --help
 chatmail --version
+chatmail --tree
 python -m pytest -q
 python -m build
 ```
 
+## 当前 CLI 树
+
+```text
+chatmail  # ChatArch mail tooling entrypoint
+├── --help  # show command help
+├── --version  # show the installed package version
+└── --tree  # show this CLI tree
+```
+
 ## 命令行规范
 
-这个模板默认依赖 `chatstyle>=0.1.0,<0.2.0` 和 `chatenv>=0.2.0,<0.3.0`，新增命令应优先使用：
-
-- `CommandSchema` / `CommandField` 描述输入。
-- `add_interactive_option()` 提供统一 `-i/-I`。
-- `resolve_command_inputs()` 统一缺参补问、默认值、TTY 与校验。
-- 默认生成 `config.py` 和 `chatenv.configs` 入口点，使包可被 ChatEnv 发现；只有明确不需要 ChatEnv 接入时才使用 `--without-chatenv-provider`。
+ChatMail 当前保留 root-only CLI 和 ChatEnv 配置发现入口。新增交互式命令时，应重新引入并使用 ChatStyle 的 `CommandSchema` / `CommandField`、`add_interactive_option()` 与 `resolve_command_inputs()`；没有真实交互命令前，不暴露 scaffold/demo 子命令。
 
 ## 目录结构
 

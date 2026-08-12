@@ -1,15 +1,16 @@
-# CLI 能力地图
+# CLI 树
 
-这篇文档是 `ChatMail` CLI 的简明能力地图，用来校对哪些命令已经是一等入口、哪些仍然只是边界或规划。生成后请按真实命令树更新；不要把未实现命令写成已可用操作。
+`ChatMail` 当前是 root-only CLI。这个页面必须从真实 `chatmail --tree` 输出同步，不能手写未来命令。
 
 可导入 Python 函数映射见 [接口树](interface-tree.md)。当前包能力边界见 [能力地图](capability-map.md)。
 
 ## 顶层命令
 
 ```text
-chatmail                  # ChatMail 命令行入口
-├── --help                     # 显示 CLI 帮助和已注册命令
-└── --version                  # 输出当前包版本
+chatmail  # ChatArch mail tooling entrypoint
+├── --help  # show command help
+├── --version  # show the installed package version
+└── --tree  # show this CLI tree
 ```
 
 ## 基础入口
@@ -17,27 +18,19 @@ chatmail                  # ChatMail 命令行入口
 ```text
 chatmail --help           # 验证命令已安装，并查看当前命令树
 chatmail --version        # 验证当前安装版本
+chatmail --tree           # 显示真实 CLI 树
 ```
 
-`--help` 和 `--version` 是模板默认可验证入口。新增业务命令后，应像 ChatTea 的 CLI 树一样，把命令组单独展开，并给每个命令写一行注释。
+`--help`、`--version` 和 `--tree` 是当前可验证入口。新增业务命令后，应像 ChatTea 的 CLI 树一样，把命令组单独展开，并给每个命令写一行注释。
 
-## 业务命令槽位
+## 当前状态
 
-```text
-chatmail <group>          # 按当前包真实能力命名的命令组
-├── <command>                  # 说明这个命令做什么
-└── <command>                  # 说明状态、边界或 checkpoint
-```
-
-这里是占位槽位，不是未来能力承诺。只有当命令、Python 函数和测试都存在时，才把它写成已实现入口。
-
-## 状态约定
-
-| 状态 | 含义 |
-| --- | --- |
-| 已实现 | 命令、函数和测试已经存在 |
-| 已验证 | 已通过 CI、本地 smoke 或真实服务实践 |
-| 规划 / checkpoint | 只保留边界说明；实现前不要写操作教程 |
+| 入口 | 状态 | 说明 |
+| --- | --- | --- |
+| `chatmail --help` | 已实现 | 显示根命令帮助。 |
+| `chatmail --version` | 已实现 | 显示已安装包版本。 |
+| `chatmail --tree` | 已实现 | 显示当前真实 CLI 树。 |
+| Mail tooling 子命令 | 尚未实现 | 未来有真实 mail tooling 能力后再加入 CLI。 |
 
 ## 实现合约
 

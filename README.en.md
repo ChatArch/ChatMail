@@ -36,18 +36,23 @@ Choose documentation by scenario:
 pip install -e ".[dev]"
 chatmail --help
 chatmail --version
+chatmail --tree
 python -m pytest -q
 python -m build
 ```
 
+## Current CLI Tree
+
+```text
+chatmail  # ChatArch mail tooling entrypoint
+├── --help  # show command help
+├── --version  # show the installed package version
+└── --tree  # show this CLI tree
+```
+
 ## CLI Contract
 
-This template depends on `chatstyle>=0.1.0,<0.2.0` and `chatenv>=0.2.0,<0.3.0`. New commands should prefer:
-
-- `CommandSchema` / `CommandField` for inputs.
-- `add_interactive_option()` for the shared `-i/-I` switch.
-- `resolve_command_inputs()` for missing args, defaults, TTY behavior, and validation.
-- Generate `config.py` and a `chatenv.configs` entry point by default so the package is ChatEnv-discoverable; use `--without-chatenv-provider` only when ChatEnv integration is intentionally not needed.
+ChatMail currently keeps a root-only CLI plus a ChatEnv configuration discovery entry point. When real interactive commands are added, reintroduce and use ChatStyle's `CommandSchema` / `CommandField`, `add_interactive_option()`, and `resolve_command_inputs()`; until then, do not expose scaffold/demo subcommands.
 
 ## Layout
 
