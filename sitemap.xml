@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://arch.gh.wzhecnu.cn/ChatMail/</loc>
+        <lastmod>2026-08-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://arch.gh.wzhecnu.cn/ChatMail/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://arch.gh.wzhecnu.cn/ChatMail/en/"/>
+    </url>
+    <url>
+        <loc>https://arch.gh.wzhecnu.cn/ChatMail/capability-map/</loc>
+        <lastmod>2026-08-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://arch.gh.wzhecnu.cn/ChatMail/capability-map/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://arch.gh.wzhecnu.cn/ChatMail/en/capability-map/"/>
+    </url>
+    <url>
+        <loc>https://arch.gh.wzhecnu.cn/ChatMail/cli-tree/</loc>
+        <lastmod>2026-08-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://arch.gh.wzhecnu.cn/ChatMail/cli-tree/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://arch.gh.wzhecnu.cn/ChatMail/en/cli-tree/"/>
+    </url>
+    <url>
+        <loc>https://arch.gh.wzhecnu.cn/ChatMail/interface-tree/</loc>
+        <lastmod>2026-08-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://arch.gh.wzhecnu.cn/ChatMail/interface-tree/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://arch.gh.wzhecnu.cn/ChatMail/en/interface-tree/"/>
+    </url>
+    <url>
+        <loc>https://arch.gh.wzhecnu.cn/ChatMail/en/</loc>
+        <lastmod>2026-08-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://arch.gh.wzhecnu.cn/ChatMail/en/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://arch.gh.wzhecnu.cn/ChatMail/"/>
+    </url>
+    <url>
+        <loc>https://arch.gh.wzhecnu.cn/ChatMail/en/capability-map/</loc>
+        <lastmod>2026-08-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://arch.gh.wzhecnu.cn/ChatMail/en/capability-map/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://arch.gh.wzhecnu.cn/ChatMail/capability-map/"/>
+    </url>
+    <url>
+        <loc>https://arch.gh.wzhecnu.cn/ChatMail/en/cli-tree/</loc>
+        <lastmod>2026-08-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://arch.gh.wzhecnu.cn/ChatMail/en/cli-tree/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://arch.gh.wzhecnu.cn/ChatMail/cli-tree/"/>
+    </url>
+    <url>
+        <loc>https://arch.gh.wzhecnu.cn/ChatMail/en/interface-tree/</loc>
+        <lastmod>2026-08-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://arch.gh.wzhecnu.cn/ChatMail/en/interface-tree/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://arch.gh.wzhecnu.cn/ChatMail/interface-tree/"/>
+    </url>
+</urlset>
