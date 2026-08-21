@@ -8,7 +8,7 @@
 
 - **命令行入口**
 
-    `chatmail --help` 和 `chatmail --version` 是默认可验证入口。
+    `chatmail --help`、`--version`、`--tree` 和 `--tree-brief` 是默认可验证入口。
 
 - **Python 接口**
 
@@ -24,8 +24,8 @@
 
 | 能力 | 状态 | 说明 |
 | --- | --- | --- |
-| 命令行基础入口 | 已实现 | 模板生成 Click group、`--version` 和基础测试。 |
-| ChatEnv 配置提供者 | 已实现 | 默认生成 `config.py` 和 `chatenv.configs` 入口点。 |
+| 命令行基础入口 | 已实现 | 显式 `chatmail` Click root 使用 ChatStyle 注册树，提供 `--version`、`--tree` 和 `--tree-brief`。 |
+| ChatEnv 配置提供者 | 已实现 | `config.py` 提供 typed sensitive field，并通过 `chatenv.configs` 入口点使用 ChatEnv 存储路径。 |
 | 业务命令 | 未实现 | 按当前包真实需求补充，不能在模板里伪造未来命令。 |
 
 ## 不在当前范围

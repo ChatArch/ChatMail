@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.2 - 2026-08-22
+
+### Added
+
+- Added `chatmail --tree-brief`, which renders the same registered command surface without parameter signatures.
+- Added full/brief tree contract tests and installed console-script plus wheel CI readbacks across Python 3.10-3.12.
+
+### Changed
+
+- Replaced the package-local tree renderer with ChatStyle `add_tree_option()` and made the public `chatmail` root name explicit.
+- Aligned runtime dependencies to `chatstyle>=0.2.0,<0.3.0` and `chatenv>=0.2.10,<0.3.0`.
+- Synchronized bilingual CLI documentation with the registered runtime output and bounded supported Click/MkDocs Material versions.
+
 ## 0.1.1 - 2026-08-12
 
 ### Added

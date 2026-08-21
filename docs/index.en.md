@@ -50,6 +50,16 @@ This template keeps only durable documentation entry points; it does not generat
 - **Verified**: covered by local smoke, CI, or real-service practice.
 - **Not implemented**: keep as boundary and planning notes only; turn into operation docs after implementation and validation.
 
+## CLI Contract
+
+```bash
+chatmail --version
+chatmail --tree
+chatmail --tree-brief
+```
+
+The full tree includes parameter signatures. The brief tree preserves the same registered nodes and descriptions without signatures.
+
 ## Local Preview
 
 ```bash

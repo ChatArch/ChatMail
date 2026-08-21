@@ -37,22 +37,26 @@ pip install -e ".[dev]"
 chatmail --help
 chatmail --version
 chatmail --tree
+chatmail --tree-brief
 python -m pytest -q
 python -m build
 ```
 
 ## 当前 CLI 树
 
+ChatMail 使用共享的 `chatstyle.add_tree_option()` 从真实注册的 Click command surface 生成完整和简洁命令树。当前 CLI 是 root-only，因此两个视图的节点相同。
+
 ```text
-chatmail  # ChatArch mail tooling entrypoint
-├── --help  # show command help
-├── --version  # show the installed package version
-└── --tree  # show this CLI tree
+chatmail
+├── --help  # Show this message and exit.
+├── --version  # Show the version and exit.
+├── --tree  # Print the registered CLI tree and exit.
+└── --tree-brief  # Print the registered CLI tree without parameter signatures and exit.
 ```
 
 ## 命令行规范
 
-ChatMail 当前保留 root-only CLI 和 ChatEnv 配置发现入口。新增交互式命令时，应重新引入并使用 ChatStyle 的 `CommandSchema` / `CommandField`、`add_interactive_option()` 与 `resolve_command_inputs()`；没有真实交互命令前，不暴露 scaffold/demo 子命令。
+ChatMail 当前保留 root-only CLI 和 ChatEnv typed 配置发现入口。CLI 固定使用 `chatstyle>=0.2.0,<0.3.0`，配置入口使用 `chatenv>=0.2.10,<0.3.0` 与 ChatEnv 管理的存储路径。新增交互式命令时，应使用 ChatStyle 的 `CommandSchema` / `CommandField`、`add_interactive_option()` 与 `resolve_command_inputs()`；没有真实交互命令前，不暴露 scaffold/demo 子命令。
 
 ## 目录结构
 
