@@ -50,6 +50,16 @@ ChatMail 是 ChatArch 系列 Python 包。这个文档站提供长期维护的�
 - **已验证**：已经通过本地 smoke、CI 或真实服务实践验证。
 - **未实现**：只写边界和计划，不写成可执行教程；实现并验证后再升级为操作文档。
 
+## CLI 合约
+
+```bash
+chatmail --version
+chatmail --tree
+chatmail --tree-brief
+```
+
+完整树包含参数签名；简洁树保留相同注册节点和说明，但省略参数签名。
+
 ## 本地预览
 
 ```bash

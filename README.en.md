@@ -37,22 +37,26 @@ pip install -e ".[dev]"
 chatmail --help
 chatmail --version
 chatmail --tree
+chatmail --tree-brief
 python -m pytest -q
 python -m build
 ```
 
 ## Current CLI Tree
 
+ChatMail uses the shared `chatstyle.add_tree_option()` runtime to render full and brief trees from the registered Click command surface. The CLI is currently root-only, so both views contain the same nodes.
+
 ```text
-chatmail  # ChatArch mail tooling entrypoint
-├── --help  # show command help
-├── --version  # show the installed package version
-└── --tree  # show this CLI tree
+chatmail
+├── --help  # Show this message and exit.
+├── --version  # Show the version and exit.
+├── --tree  # Print the registered CLI tree and exit.
+└── --tree-brief  # Print the registered CLI tree without parameter signatures and exit.
 ```
 
 ## CLI Contract
 
-ChatMail currently keeps a root-only CLI plus a ChatEnv configuration discovery entry point. When real interactive commands are added, reintroduce and use ChatStyle's `CommandSchema` / `CommandField`, `add_interactive_option()`, and `resolve_command_inputs()`; until then, do not expose scaffold/demo subcommands.
+ChatMail currently keeps a root-only CLI plus a typed ChatEnv configuration discovery entry point. The CLI requires `chatstyle>=0.2.0,<0.3.0`; configuration uses `chatenv>=0.2.10,<0.3.0` and ChatEnv-managed storage paths. When real interactive commands are added, use ChatStyle's `CommandSchema` / `CommandField`, `add_interactive_option()`, and `resolve_command_inputs()`; until then, do not expose scaffold/demo subcommands.
 
 ## Layout
 

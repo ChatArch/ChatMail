@@ -8,7 +8,7 @@ Use this page to check which first-class capabilities `ChatMail` currently owns,
 
 - **CLI Entry**
 
-    `chatmail --help` and `chatmail --version` are the default verification entry points.
+    `chatmail --help`, `--version`, `--tree`, and `--tree-brief` are the default verification entry points.
 
 - **Python API**
 
@@ -24,8 +24,8 @@ Use this page to check which first-class capabilities `ChatMail` currently owns,
 
 | Capability | Status | Notes |
 | --- | --- | --- |
-| CLI base entry | Implemented | The template generates a Click group, `--version`, and a base test. |
-| ChatEnv provider | Implemented | The template generates `config.py` and a `chatenv.configs` entry point. |
+| CLI base entry | Implemented | The explicit `chatmail` Click root uses ChatStyle's registered tree and exposes `--version`, `--tree`, and `--tree-brief`. |
+| ChatEnv provider | Implemented | `config.py` defines a typed sensitive field and registers it through `chatenv.configs` with ChatEnv-managed storage paths. |
 | Business commands | Not implemented | Add these from the real package domain; do not fake future commands in the template. |
 
 ## Out of Scope
